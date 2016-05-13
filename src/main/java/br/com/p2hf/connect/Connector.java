@@ -1,4 +1,4 @@
-package br.com.p2hf.web.connect;
+package br.com.p2hf.connect;
 
 public interface Connector {
 
