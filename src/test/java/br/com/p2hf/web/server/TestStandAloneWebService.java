@@ -15,7 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class StandAloneWebServiceTest {
+public class TestStandAloneWebService {
 
 	private static final String LOCALHOST = "http://localhost:9090";
 
@@ -32,17 +32,12 @@ public class StandAloneWebServiceTest {
 			e.printStackTrace();
 		}
 		saws = new StandAloneWebService("br.com.p2hf.web", url);
-		try {
-			saws.server.start();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		saws.start();
 	}
 	
 	@After
 	public void destroy() {
-		saws.server.shutdown();
+		saws.shutdown();
 	}
 	
 	@Test
